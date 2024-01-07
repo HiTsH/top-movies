@@ -77,3 +77,29 @@ Renders the home page displaying the user's movie collection.
 
 6. Open your browser and navigate to `http://localhost:5000` to use the application.
 
+------------------
+## File Structure
+------------------
+
+- main.py: The main Flask application file.
+- templates/: Contains HTML templates.
+- static/: Contains static assets such as stylesheets and images.
+- models.py: Defines the SQLAlchemy database model.
+- forms.py: Defines WTForms for handling user input.
+- README.md: This file providing an overview of the project.
+
+---------------------
+## Technologies Used
+---------------------
+
+- Flask: Web framework for Python.
+- SQLAlchemy: SQL toolkit and Object-Relational Mapping (ORM) library.
+- Flask-WTF: Integration of WTForms with Flask.
+- Flask-Bootstrap: Bootstrap integration for Flask.
+- python-dotenv: Load environment variables from a file.
+
+-----------
+## License
+-----------
+
+This project is licensed under the MIT License.
