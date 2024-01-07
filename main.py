@@ -15,8 +15,8 @@ db = SQLAlchemy()
 db.init_app(app)
 
 TMDB_IMAGE_URL = 'https://image.tmdb.org/t/p/original/'
-TMDB_ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxMDA0ODdmMWRjZjY2ZTYwZmQ1YzljYjE0ZGNkNTE0MyIsInN1YiI6IjY1OWE5MGMyNWIxMjQwMDA5NTYxYzc1ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.8wy3IRu1Sp2MXO8cABqJ1q_9-tjV_UNM4U_U_UGLMY0'
-TMDB_API_KEY = '100487f1dcf66e60fd5c9cb14dcd5143'
+TMDB_ACCESS_TOKEN = 'Your API Read Access Token'
+TMDB_API_KEY = 'Your API Key'
 headers = {
     'authorization': f'Bearer {TMDB_ACCESS_TOKEN}',
     'accept': 'application/json',
