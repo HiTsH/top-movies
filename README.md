@@ -7,8 +7,10 @@ This Flask web application allows users to manage their favorite movie collectio
 -------------
 
 ### `home()`
-- Renders the home page displaying the user's movie collection.
-- Retrieves all movies from the database and passes them to the template.
+Renders the home page displaying the user's movie collection.
+- Retrieves all movies from the database and orders them by rating.
+- Assigns a ranking based on the movie's position in the sorted list.
+- Commits the ranking changes to the database.
 
 ### `edit_movie()`
 - Renders the edit movie page.
@@ -63,13 +65,15 @@ This Flask web application allows users to manage their favorite movie collectio
 ## Usage
 ---------
 
-1. Install the required packages: `pip install Flask Flask-SQLAlchemy Flask-WTF Flask-Bootstrap python-dotenv requests`.
+1. Install the required packages: `pip install -r requirements.txt`.
 
 2. Set up your TMDB API access by obtaining an API key.
 
 3. Create a `.env` file in the project root with the following content:
+   TMDB_ACCESS_TOKEN=your_tmdb_access_token
+   TMDB_API_KEY=your_tmdb_api_key
 
-4. Run the application: `python your_app_file.py`.
+5. Run the application: `python your_app_file.py`.
 
-5. Open your browser and navigate to `http://localhost:5000` to use the application.
+6. Open your browser and navigate to `http://localhost:5000` to use the application.
 
