@@ -52,7 +52,14 @@ class AddForm(FlaskForm):
 
 @app.route("/")
 def home():
-    all_movies = db.session.execute(db.select(Movie).order_by(Movie.id)).scalars()
+    result = db.session.execute(db.select(Movie).order_by(Movie.rating))
+    all_movies = result.scalars().all()    # Convert ScalarResult to Python List
+
+    # Ranking movies based on rating
+    for i in range(len(all_movies)):
+        all_movies[i].ranking = len(all_movies) - i
+    db.session.commit()
+        
     return render_template("index.html", movies=all_movies)
 
 
